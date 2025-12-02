@@ -1,5 +1,5 @@
 {
-  "name": "qcxn",
+  "name": "qcxn-fe-spec",
   "private": true,
   "description": "前端编码规范工程化",
   "scripts": {
@@ -16,17 +16,21 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "keywords": [
-    "qcxn"
+    "qcxn-fe-spec"
   ],
   "author": "dongzhiqiang",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
+    "eslint": "^8.7.0",
     "husky": "^8.0.3",
     "lerna": "^6.6.2",
+    "lint-staged": "^16.2.7",
     "markdownlint": "^0.28.1",
     "pnpm": "^8.6.0",
+    "prettier": "^3.7.3",
     "rimraf": "^3.0.2",
+    "stylelint": "^14.3.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.5.2",
     "typedoc": "^0.24.7",
@@ -35,6 +39,11 @@
     "vuepress": "^1.9.9",
     "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.7"
+  },
+  "lint-staged": {
+    "*": "prettier --write",
+    "*.{vue,ts}": "eslint --fix",
+    "*.{html,vue,css,sass,scss}": "stylelint --fix"
   },
   "dependencies": {
     "conventional-changelog-conventionalcommits": "^4.5.0"
