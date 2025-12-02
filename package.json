@@ -41,7 +41,7 @@
     "vuepress-plugin-zooming": "^1.1.7"
   },
   "lint-staged": {
-    "*": "prettier --write",
+    "*.{js,jsx,ts,tsx,vue,css,scss,sass,json,md,html,yaml,yml}": "prettier --write",
     "*.{vue,ts}": "eslint --fix",
     "*.{html,vue,css,sass,scss}": "stylelint --fix"
   },
